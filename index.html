@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!--
+* It will be a pleasure if you add credits when you are using this Code.
+* അടിച്ചുമാറ്റുന്നവർ ക്രെഡിറ്റ് വച്ചാൽ സന്തോഷം.
+-->
 <head>
     <meta charset="UTF-8">
     <title>About me - Jithendra V Kumar</title>
@@ -72,7 +75,25 @@
             text-transform: uppercase;
             margin-bottom: 1rem;
             line-height: 1;
+            color: #000;
+            background-image: linear-gradient(92deg, #f35626 0%,#feab3a 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: hue 3s infinite linear;
+            display: inline-block;
+
         }
+        @keyframes hue {
+            from {
+             filter: hue-rotate(0deg);
+                }
+  
+            to {
+            filter: hue-rotate(-360deg);
+            }
+        }
+
 
         p {
             text-align: center;
