@@ -7,43 +7,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jithendra V Kumar</title>
-    <meta name="description" content="Jithendra V Kumar. Tech enthusiast and script kiddie from God's Own Country, Kerala.">
-    <meta name="color-scheme" content="dark light">
-    <meta name="theme-color" content="#0e110f" media="(prefers-color-scheme: dark)">
-    <meta name="theme-color" content="#f5f0e4" media="(prefers-color-scheme: light)">
+    <title>Jithendra V Kumar — Tech enthusiast from Kerala</title>
+    <meta name="description" content="Jithendra V Kumar. Tech enthusiast and script kiddie from God's Own Country, Kerala. Projects, tools and links, pulled live from GitHub.">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#06100d">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Jithendra V Kumar">
-    <meta property="og:description" content="Tech enthusiast and script kiddie from God's Own Country, Kerala.">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230e110f'/%3E%3Crect x='5' y='5' width='54' height='54' rx='10' fill='none' stroke='%23d9ab3f' stroke-width='2'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23ece6d5'%3EJ%3C/text%3E%3C/svg%3E">
+    <meta property="og:title" content="Jithendra V Kumar — Tech enthusiast from Kerala">
+    <meta property="og:description" content="Tech enthusiast and script kiddie from God's Own Country, Kerala. Projects pulled live from GitHub.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2319b37d'/%3E%3Cstop offset='1' stop-color='%23e6b04a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='47' font-family='Georgia,serif' font-style='italic' font-weight='700' font-size='42' text-anchor='middle' fill='%2306100d'%3EJ%3C/text%3E%3C/svg%3E">
+    <link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <script>document.documentElement.classList.add('js');</script>
 
     <style>
-        :root {
-            color-scheme: dark light;
-
-            --bg: #0e110f;
-            --fg: #ece6d5;
-            --muted: #8f9288;
-            --rule: #252a26;
-            --accent: #d9ab3f;
-            --gold: #d9ab3f;
-
-            --serif: "Iowan Old Style", Charter, "Palatino Linotype", Palatino, Georgia, serif;
-            --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, "Liberation Mono", monospace;
-
-            --measure: 46rem;
-            --gutter: clamp(1.25rem, 5vw, 2.5rem);
+        @font-face {
+            font-family: "Fraunces";
+            src: url("fonts/fraunces-latin.woff2") format("woff2");
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
         }
 
-        @media (prefers-color-scheme: light) {
-            :root {
-                --bg: #f5f0e4;
-                --fg: #17201b;
-                --muted: #5d6359;
-                --rule: #d8d1bd;
-                --accent: #1d5a3b;
-                --gold: #b58a2a;
-            }
+        @font-face {
+            font-family: "Fraunces";
+            src: url("fonts/fraunces-italic-latin.woff2") format("woff2");
+            font-weight: 100 900;
+            font-style: italic;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Geist";
+            src: url("fonts/geist-latin.woff2") format("woff2");
+            font-weight: 100 900;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Geist Mono";
+            src: url("fonts/geist-mono-latin.woff2") format("woff2");
+            font-weight: 400 600;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @property --a {
+            syntax: "<angle>";
+            inherits: false;
+            initial-value: 0deg;
+        }
+
+        :root {
+            color-scheme: dark;
+
+            --bg: #06100d;
+            --fg: #f1ede2;
+            --muted: #9aa79f;
+            --line: rgba(241, 237, 226, 0.12);
+            --line-strong: rgba(241, 237, 226, 0.24);
+            --surface: rgba(241, 237, 226, 0.04);
+            --surface-2: rgba(241, 237, 226, 0.07);
+
+            --emerald: #19b37d;
+            --teal: #3fb8c4;
+            --gold: #e6b04a;
+            --coral: #ef6a45;
+
+            --serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+            --sans: "Geist", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+            --pad: clamp(1.25rem, 4vw, 3rem);
+            --max: 80rem;
+            --bar: 4rem;
+            --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+            --radius: 1.25rem;
         }
 
         *,
@@ -53,28 +92,32 @@
         }
 
         html {
+            scroll-padding-top: calc(var(--bar) + 1rem);
             -webkit-text-size-adjust: 100%;
             text-size-adjust: 100%;
         }
 
+        @media (prefers-reduced-motion: no-preference) {
+            html {
+                scroll-behavior: smooth;
+            }
+        }
+
         body {
             margin: 0;
-            min-height: 100vh;
-            min-height: 100svh;
-            display: flex;
-            flex-direction: column;
             background: var(--bg);
             color: var(--fg);
-            font-family: var(--serif);
-            font-size: 1.125rem;
+            font-family: var(--sans);
+            font-size: 1.0625rem;
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             text-rendering: optimizeLegibility;
+            overflow-x: hidden;
         }
 
         ::selection {
-            background: var(--accent);
-            color: var(--bg);
+            background: var(--gold);
+            color: #06100d;
         }
 
         a {
@@ -82,244 +125,1301 @@
             text-decoration: none;
         }
 
-        a:focus-visible {
-            outline: 2px solid var(--accent);
-            outline-offset: 4px;
-            border-radius: 2px;
+        a:focus-visible,
+        button:focus-visible {
+            outline: 2px solid var(--gold);
+            outline-offset: 3px;
+            border-radius: 4px;
         }
 
-        .page {
+        h1,
+        h2,
+        h3,
+        p,
+        dl,
+        dd,
+        ul {
+            margin: 0;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .wrap {
             width: 100%;
-            max-width: calc(var(--measure) + var(--gutter) * 2);
+            max-width: calc(var(--max) + var(--pad) * 2);
             margin: 0 auto;
-            padding: 0 var(--gutter);
-            flex: 1;
-            display: flex;
-            flex-direction: column;
+            padding: 0 var(--pad);
         }
 
-        /* ---------- masthead ---------- */
-
-        .masthead {
-            display: flex;
-            justify-content: space-between;
-            gap: 1rem;
-            padding: clamp(1.5rem, 4vw, 2.5rem) 0 0.9rem;
+        .mono {
             font-family: var(--mono);
-            font-size: 0.8125rem;
-            line-height: 1.4;
+            font-size: 0.75rem;
+            line-height: 1.5;
+        }
+
+        .muted {
             color: var(--muted);
-            border-bottom: 3px double var(--gold);
+        }
+
+        .sr {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            white-space: nowrap;
+        }
+
+        .skip {
+            position: absolute;
+            left: var(--pad);
+            top: -4rem;
+            z-index: 50;
+            padding: 0.6rem 0.9rem;
+            background: var(--fg);
+            color: var(--bg);
+            border-radius: 0.5rem;
+        }
+
+        .skip:focus {
+            top: 0.75rem;
+        }
+
+        /* ---------- aurora background ---------- */
+
+        .aurora {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            overflow: hidden;
+            background:
+                radial-gradient(120% 70% at 50% -10%, #0e2f26 0%, rgba(6, 16, 13, 0) 70%),
+                #06100d;
+            pointer-events: none;
+        }
+
+        .blob {
+            position: absolute;
+            width: var(--s);
+            height: var(--s);
+            left: var(--l);
+            top: var(--t);
+            transform: translate3d(0, calc(var(--sy, 0) * var(--k) * -1px), 0);
+            will-change: transform;
+        }
+
+        .blob i {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: radial-gradient(circle at 50% 50%, var(--c) 0%, rgba(0, 0, 0, 0) 68%);
+            opacity: var(--o);
+            filter: blur(40px);
+            animation: drift var(--d) ease-in-out infinite alternate;
+        }
+
+        .blob.b1 { --s: 62vmax; --l: -18vmax; --t: -22vmax; --c: var(--emerald); --o: 0.5;  --d: 26s; --k: 0.05; }
+        .blob.b2 { --s: 52vmax; --l: 48vw;    --t: -10vmax; --c: var(--gold);    --o: 0.34; --d: 32s; --k: 0.09; }
+        .blob.b3 { --s: 58vmax; --l: 8vw;     --t: 55vh;    --c: var(--teal);    --o: 0.3;  --d: 38s; --k: 0.14; }
+        .blob.b4 { --s: 40vmax; --l: 62vw;    --t: 80vh;    --c: var(--coral);   --o: 0.26; --d: 30s; --k: 0.2; }
+
+        .blob.b2 i { animation-direction: alternate-reverse; }
+        .blob.b4 i { animation-direction: alternate-reverse; }
+
+        @keyframes drift {
+            0% {
+                transform: translate3d(0, 0, 0) scale(1);
+            }
+
+            50% {
+                transform: translate3d(7vmax, 5vmax, 0) scale(1.12);
+            }
+
+            100% {
+                transform: translate3d(-5vmax, 9vmax, 0) scale(0.94);
+            }
+        }
+
+        .grain {
+            position: absolute;
+            inset: 0;
+            opacity: 0.07;
+            mix-blend-mode: overlay;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+
+        /* ---------- progress + bar ---------- */
+
+        .progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            z-index: 40;
+            background: linear-gradient(90deg, var(--emerald), var(--gold), var(--coral));
+            transform-origin: left;
+            transform: scaleX(var(--p, 0));
+        }
+
+        .bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 30;
+            height: var(--bar);
+            transition: background 0.3s, border-color 0.3s;
+            border-bottom: 1px solid transparent;
+        }
+
+        .bar.scrolled {
+            background: rgba(6, 16, 13, 0.72);
+            -webkit-backdrop-filter: blur(16px) saturate(1.4);
+            backdrop-filter: blur(16px) saturate(1.4);
+            border-bottom-color: var(--line);
+        }
+
+        .bar .wrap {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+        }
+
+        .logo {
+            font-family: var(--serif);
+            font-style: italic;
+            font-weight: 600;
+            font-size: 1.5rem;
+            letter-spacing: -0.01em;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .logo b {
+            display: grid;
+            place-items: center;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 0.6rem;
+            background: linear-gradient(135deg, var(--emerald), var(--gold));
+            color: #06100d;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: clamp(1rem, 2.6vw, 2rem);
+            font-size: 0.9375rem;
+        }
+
+        .nav a:not(.pill) {
+            color: var(--muted);
+            transition: color 0.2s;
+        }
+
+        .nav a:not(.pill):hover {
+            color: var(--fg);
+        }
+
+        .pill {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--line-strong);
+            border-radius: 999px;
+            transition: background 0.2s, color 0.2s, border-color 0.2s;
+        }
+
+        .pill:hover {
+            background: var(--fg);
+            color: var(--bg);
+            border-color: var(--fg);
         }
 
         /* ---------- hero ---------- */
 
-        main {
-            flex: 1;
-            padding-top: clamp(3.5rem, 12vh, 7rem);
+        .hero {
+            position: relative;
+            --px: 50%;
+            --py: 40%;
         }
 
-        h1 {
-            margin: 0;
-            font-weight: 400;
-            font-size: clamp(3rem, 11vw, 5.75rem);
-            line-height: 0.98;
-            letter-spacing: -0.03em;
-            text-wrap: balance;
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(560px circle at var(--px) var(--py), rgba(230, 176, 74, 0.11), transparent 65%);
+            pointer-events: none;
         }
 
-        h1 span {
-            display: block;
+        .hero-in {
+            position: relative;
+            container-type: inline-size;
+            min-height: 100vh;
+            min-height: 100svh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-top: calc(var(--bar) + 3rem);
+            padding-bottom: clamp(2rem, 5vh, 3.5rem);
         }
 
-        h1 .last {
-            font-style: italic;
-            color: var(--accent);
+        .chip {
+            align-self: flex-start;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.4rem 0.85rem;
+            margin-bottom: clamp(1.25rem, 3vh, 2.25rem);
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: var(--surface);
+            animation: fade 0.8s var(--ease) 0.1s both;
         }
 
-        /* ---------- labelled rows ---------- */
-
-        .row {
-            display: grid;
-            grid-template-columns: 9rem 1fr;
-            column-gap: 2rem;
-            margin-top: clamp(3.5rem, 9vh, 5.5rem);
-        }
-
-        .label {
-            margin: 0;
-            padding-top: 0.2rem;
-            font-family: var(--mono);
-            font-size: 0.8125rem;
-            font-weight: 400;
-            line-height: 1.6;
-            color: var(--muted);
-        }
-
-        /* ---------- whoami ---------- */
-
-        .whoami {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            font-family: var(--mono);
-            font-size: 0.9375rem;
-            line-height: 1.7;
-        }
-
-        .whoami li {
-            display: grid;
-            grid-template-columns: 1.5rem 1fr;
-            padding: 0.2rem 0;
-        }
-
-        .whoami li::before {
-            content: "$";
-            color: var(--accent);
-        }
-
-        .whoami b {
-            font-weight: 600;
-        }
-
-        .caret {
-            display: inline-block;
-            width: 0.55em;
-            height: 1.05em;
-            margin-left: 0.15em;
-            vertical-align: text-bottom;
-            background: var(--accent);
-        }
-
-        /* ---------- elsewhere ---------- */
-
-        .links {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            border-top: 1px solid var(--rule);
-        }
-
-        .links li {
-            border-bottom: 1px solid var(--rule);
-        }
-
-        .links a {
-            display: grid;
-            grid-template-columns: 1fr auto 1.5rem;
-            align-items: baseline;
-            column-gap: 1rem;
-            padding: 1rem 0;
-            transition: color 0.2s ease;
-        }
-
-        .links .name {
-            font-size: 1.5rem;
-            line-height: 1.2;
-            letter-spacing: -0.01em;
-            transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1);
-        }
-
-        .links .handle {
-            font-family: var(--mono);
-            font-size: 0.8125rem;
-            color: var(--muted);
-            transition: color 0.2s ease;
-        }
-
-        .links .arrow {
-            justify-self: end;
-            font-family: var(--mono);
-            color: var(--muted);
-            transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1), color 0.2s ease;
-        }
-
-        .links a:hover .name,
-        .links a:focus-visible .name {
-            color: var(--accent);
-            transform: translateX(0.35rem);
-        }
-
-        .links a:hover .handle,
-        .links a:focus-visible .handle {
+        .chip b {
+            font-weight: 500;
             color: var(--fg);
         }
 
-        .links a:hover .arrow,
-        .links a:focus-visible .arrow {
-            color: var(--accent);
+        .live {
+            position: relative;
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background: var(--emerald);
+        }
+
+        .live::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: inherit;
+            animation: ping 2s ease-out infinite;
+        }
+
+        @keyframes ping {
+            from {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+
+            to {
+                transform: scale(3.2);
+                opacity: 0;
+            }
+        }
+
+        h1.name {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: min(22cqi, 28vh);
+            line-height: 0.88;
+            letter-spacing: -0.035em;
+            font-variation-settings: "opsz" 144, "SOFT" 0;
+            margin-left: -0.04em;
+        }
+
+        .name .line {
+            display: block;
+            white-space: nowrap;
+        }
+
+        .name .line.second {
+            font-style: italic;
+            padding-left: 0.04em;
+        }
+
+        .word {
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .ch {
+            display: inline-block;
+            color: var(--fg);
+            font-variation-settings: "opsz" 144, "wght" 400, "SOFT" 0;
+            transition: font-variation-settings 0.35s var(--ease);
+            animation: rise 1.1s var(--ease) both;
+            animation-delay: calc(var(--i) * 55ms + 250ms);
+            will-change: transform, opacity;
+        }
+
+        .second .ch {
+            color: color-mix(in oklab, var(--gold), var(--coral) calc(var(--t) * 100%));
+        }
+
+        @keyframes rise {
+            from {
+                opacity: 0;
+                transform: translateY(0.45em) rotate(5deg);
+                filter: blur(14px);
+            }
+        }
+
+        .role {
+            display: flex;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.5rem 0.75rem;
+            margin-top: clamp(1.25rem, 3vh, 2rem);
+            font-size: clamp(1.25rem, 2.8vw, 2.25rem);
+            line-height: 1.2;
+            animation: fade 0.9s var(--ease) 1.1s both;
+        }
+
+        .role .lead {
+            color: var(--muted);
+        }
+
+        .rot {
+            display: inline-grid;
+            font-family: var(--serif);
+            font-style: italic;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: var(--gold);
+        }
+
+        .rot span {
+            grid-area: 1 / 1;
+            opacity: 0;
+            transform: translateY(60%);
+            filter: blur(6px);
+            transition: opacity 0.6s var(--ease), transform 0.6s var(--ease), filter 0.6s var(--ease);
+        }
+
+        .rot span.on {
+            opacity: 1;
+            transform: none;
+            filter: none;
+        }
+
+        .rot span.off {
+            transform: translateY(-60%);
+        }
+
+        .hero-foot {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            column-gap: 1rem;
+            row-gap: 2.25rem;
+            align-items: end;
+            margin-top: clamp(2rem, 6vh, 4rem);
+            padding-top: clamp(1.5rem, 3vh, 2.25rem);
+            border-top: 1px solid var(--line);
+            animation: fade 0.9s var(--ease) 1.35s both;
+        }
+
+        .intro {
+            grid-column: 1 / 7;
+            max-width: 34rem;
+            color: var(--muted);
+            font-size: clamp(1.0625rem, 1.4vw, 1.1875rem);
+        }
+
+        .intro strong {
+            color: var(--fg);
+            font-weight: 500;
+        }
+
+        .cta {
+            grid-column: 1 / 7;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            grid-row: 2;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.85rem 1.35rem;
+            border-radius: 999px;
+            font-weight: 500;
+            font-size: 0.9375rem;
+            border: 1px solid var(--line-strong);
+            background: none;
+            color: var(--fg);
+            cursor: pointer;
+            font-family: inherit;
+            transition: transform 0.25s var(--ease), background 0.2s, color 0.2s, border-color 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            border-color: var(--fg);
+        }
+
+        .btn.solid {
+            background: var(--fg);
+            color: var(--bg);
+            border-color: var(--fg);
+        }
+
+        .btn.solid:hover {
+            background: var(--gold);
+            border-color: var(--gold);
+        }
+
+        .btn .arr {
+            transition: transform 0.25s var(--ease);
+        }
+
+        .btn:hover .arr {
             transform: translate(2px, -2px);
+        }
+
+        .stats {
+            grid-column: 8 / -1;
+            grid-row: 1 / 3;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background: var(--line);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .stat {
+            padding: 1.1rem 1.25rem;
+            background: rgba(6, 16, 13, 0.55);
+        }
+
+        .stat dd {
+            font-size: clamp(2rem, 3.4vw, 3rem);
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: -0.03em;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .stat dt {
+            margin-top: 0.5rem;
+            order: 2;
+        }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+                transform: translateY(14px);
+            }
+        }
+
+        /* ---------- marquee ---------- */
+
+        .marquee {
+            border-block: 1px solid var(--line);
+            overflow: hidden;
+            padding: 1.1rem 0;
+            -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+        }
+
+        .marquee .track {
+            display: flex;
+            width: max-content;
+            animation: scroll 42s linear infinite;
+        }
+
+        .marquee span {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: clamp(1.75rem, 4vw, 3.25rem);
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            color: var(--muted);
+            white-space: nowrap;
+            padding-right: 2rem;
+        }
+
+        .marquee span::after {
+            content: "\2726";
+            font-style: normal;
+            font-size: 0.5em;
+            color: var(--gold);
+            margin-left: 2rem;
+            vertical-align: middle;
+        }
+
+        @keyframes scroll {
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ---------- sections ---------- */
+
+        section {
+            padding: clamp(4.5rem, 10vw, 8rem) 0 0;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            color: var(--muted);
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 2.5rem;
+            height: 1px;
+            background: linear-gradient(90deg, var(--emerald), var(--gold));
+        }
+
+        .eyebrow b {
+            font-weight: 500;
+            color: var(--gold);
+        }
+
+        h2 {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            line-height: 1;
+            letter-spacing: -0.025em;
+            font-variation-settings: "opsz" 144, "SOFT" 40;
+            text-wrap: balance;
+        }
+
+        h2 em {
+            font-style: italic;
+            color: var(--gold);
+            font-weight: 400;
+        }
+
+        .sec-head {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 1.5rem 3rem;
+            margin-bottom: clamp(2rem, 5vw, 3.5rem);
+        }
+
+        .sec-head p {
+            max-width: 26rem;
+            color: var(--muted);
+        }
+
+        /* ---------- about ---------- */
+
+        .about {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            column-gap: 1rem;
+            row-gap: 3rem;
+            align-items: start;
+        }
+
+        .about-copy {
+            grid-column: 1 / 8;
+        }
+
+        .lede {
+            margin-top: 2rem;
+            font-family: var(--serif);
+            font-size: clamp(1.5rem, 2.8vw, 2.25rem);
+            line-height: 1.25;
+            letter-spacing: 0;
+            font-weight: 400;
+            text-wrap: pretty;
+        }
+
+        .lede em {
+            font-style: italic;
+            color: var(--gold);
+        }
+
+        .about-copy p + p {
+            margin-top: 1.1rem;
+        }
+
+        .about-copy .body {
+            margin-top: 2rem;
+            max-width: 38rem;
+            color: var(--muted);
+        }
+
+        .about-copy .body p + p {
+            margin-top: 1rem;
+        }
+
+        .side {
+            grid-column: 9 / -1;
+        }
+
+        .portrait {
+            --a: 0deg;
+            width: min(100%, 15rem);
+            aspect-ratio: 1;
+            padding: 4px;
+            border-radius: 50%;
+            background: conic-gradient(from var(--a), var(--gold), var(--emerald), var(--teal), var(--coral), var(--gold));
+            animation: spin 9s linear infinite;
+            margin-bottom: 2rem;
+        }
+
+        @keyframes spin {
+            to {
+                --a: 360deg;
+            }
+        }
+
+        .portrait .in {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            background: var(--bg);
+            display: grid;
+            place-items: center;
+            position: relative;
+        }
+
+        .portrait .in span {
+            font-family: var(--serif);
+            font-style: italic;
+            font-size: 5rem;
+            font-weight: 500;
+            color: var(--gold);
+        }
+
+        .portrait img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.6s;
+        }
+
+        .portrait img.ok {
+            opacity: 1;
+        }
+
+        .facts {
+            border-top: 1px solid var(--line-strong);
+        }
+
+        .facts div {
+            display: grid;
+            grid-template-columns: 7.5rem 1fr;
+            gap: 1rem;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .facts dt {
+            color: var(--muted);
+        }
+
+        .facts dd {
+            font-size: 0.9375rem;
+        }
+
+        .facts a {
+            border-bottom: 1px solid var(--line-strong);
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .facts a:hover {
+            color: var(--gold);
+            border-color: var(--gold);
+        }
+
+        /* ---------- cards (shared) ---------- */
+
+        .spot {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: var(--surface);
+            transition: border-color 0.3s, transform 0.4s var(--ease);
+        }
+
+        .spot::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.35s;
+            background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 0%), rgba(230, 176, 74, 0.16), transparent 62%);
+        }
+
+        .spot:hover,
+        .spot:focus-within {
+            border-color: var(--line-strong);
+            transform: translateY(-3px);
+        }
+
+        .spot:hover::before,
+        .spot:focus-within::before {
+            opacity: 1;
+        }
+
+        /* ---------- toolkit ---------- */
+
+        .tools {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .tool {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            min-height: 15rem;
+        }
+
+        .tool .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: auto;
+            padding-bottom: 2.5rem;
+        }
+
+        .tool h3 {
+            font-family: var(--serif);
+            font-size: 2.25rem;
+            font-weight: 400;
+            letter-spacing: -0.015em;
+            line-height: 1;
+            font-variation-settings: "opsz" 144, "SOFT" 60;
+        }
+
+        .tool p {
+            margin-top: 0.75rem;
+            color: var(--muted);
+            font-size: 0.9375rem;
+            line-height: 1.5;
+        }
+
+        .tag {
+            padding: 0.2rem 0.6rem;
+            border: 1px solid var(--line-strong);
+            border-radius: 999px;
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        .tag.gold {
+            color: var(--gold);
+            border-color: rgba(230, 176, 74, 0.4);
+        }
+
+        .panels {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .panel {
+            padding: 1.5rem;
+        }
+
+        .panel h3 {
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+            font-size: 0.9375rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            align-items: baseline;
+        }
+
+        .stack-bar {
+            display: flex;
+            gap: 3px;
+            height: 1.75rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+        }
+
+        .stack-bar i {
+            flex: var(--n) 1 0;
+            min-width: 4px;
+            background: var(--c);
+            transform-origin: left;
+            animation: grow 1s var(--ease) both;
+            animation-delay: calc(var(--i) * 80ms);
+        }
+
+        @keyframes grow {
+            from {
+                transform: scaleX(0);
+            }
+        }
+
+        .legend {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+            gap: 0.6rem 1.25rem;
+            margin-top: 1.5rem;
+        }
+
+        .legend li {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.875rem;
+        }
+
+        .legend li::before {
+            content: "";
+            width: 0.6rem;
+            height: 0.6rem;
+            border-radius: 2px;
+            background: var(--c);
+            flex: none;
+        }
+
+        .legend b {
+            margin-left: auto;
+            font-weight: 400;
+            color: var(--muted);
+            font-family: var(--mono);
+            font-size: 0.75rem;
+        }
+
+        .years {
+            display: flex;
+            align-items: flex-end;
+            gap: 0.6rem;
+            height: 9rem;
+        }
+
+        .years li {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 0.4rem;
+            height: 100%;
+        }
+
+        .years .col {
+            width: 100%;
+            height: var(--h);
+            min-height: 6px;
+            border-radius: 6px 6px 2px 2px;
+            background: linear-gradient(180deg, var(--gold), var(--emerald));
+            transform-origin: bottom;
+            animation: growy 0.9s var(--ease) both;
+            animation-delay: calc(var(--i) * 70ms);
+        }
+
+        @keyframes growy {
+            from {
+                transform: scaleY(0);
+            }
+        }
+
+        /* ---------- work ---------- */
+
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .filters[hidden] {
+            display: none;
+        }
+
+        .chipbtn {
+            font-family: var(--mono);
+            font-size: 0.75rem;
+            padding: 0.45rem 0.85rem;
+            border-radius: 999px;
+            border: 1px solid var(--line-strong);
+            background: none;
+            color: var(--fg);
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s, border-color 0.2s;
+        }
+
+        .chipbtn:hover {
+            border-color: var(--fg);
+        }
+
+        .chipbtn[aria-pressed="true"] {
+            background: var(--fg);
+            color: var(--bg);
+            border-color: var(--fg);
+        }
+
+        .chipbtn sup {
+            margin-left: 0.35em;
+            opacity: 0.6;
+            font-size: 0.9em;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .card {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            min-height: 16rem;
+            animation: fade 0.6s var(--ease) both;
+            animation-delay: calc(var(--i, 0) * 60ms);
+        }
+
+        .card.feat {
+            grid-column: span 2;
+        }
+
+        .card .meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            color: var(--muted);
+        }
+
+        .card .meta .l {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card .meta .l::before {
+            content: "";
+            width: 0.55rem;
+            height: 0.55rem;
+            border-radius: 50%;
+            background: var(--c, var(--muted));
+        }
+
+        .card h3 {
+            margin-top: auto;
+            padding-top: 2.5rem;
+            font-family: var(--serif);
+            font-size: clamp(1.625rem, 2.4vw, 2.125rem);
+            font-weight: 400;
+            line-height: 1.08;
+            letter-spacing: -0.015em;
+            overflow-wrap: anywhere;
+            font-variation-settings: "opsz" 144, "SOFT" 50;
+        }
+
+        .card.feat h3 {
+            font-size: clamp(2.25rem, 4.2vw, 3.5rem);
+        }
+
+        .card h3 a::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+        }
+
+        .card .desc {
+            margin-top: 0.75rem;
+            color: var(--muted);
+            font-size: 0.9375rem;
+            line-height: 1.5;
+            max-width: 34rem;
+        }
+
+        .card .foot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+        }
+
+        .card .foot a {
+            position: relative;
+            z-index: 1;
+            color: var(--fg);
+            border-bottom: 1px solid var(--line-strong);
+        }
+
+        .card .open {
+            color: var(--fg);
+            transition: transform 0.3s var(--ease), color 0.2s;
+        }
+
+        .card:hover .open {
+            transform: translate(3px, -3px);
+            color: var(--gold);
+        }
+
+        .sk {
+            height: 16rem;
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: linear-gradient(100deg, var(--surface) 30%, var(--surface-2) 50%, var(--surface) 70%) 0 0 / 300% 100%;
+            animation: shimmer 1.6s linear infinite;
+        }
+
+        @keyframes shimmer {
+            to {
+                background-position: -300% 0;
+            }
+        }
+
+        .status {
+            padding: 2rem;
+            border: 1px dashed var(--line-strong);
+            border-radius: var(--radius);
+            color: var(--muted);
+        }
+
+        .status a {
+            color: var(--fg);
+            border-bottom: 1px solid var(--line-strong);
+        }
+
+        .more {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* ---------- contact ---------- */
+
+        .cta-panel {
+            position: relative;
+            isolation: isolate;
+            overflow: hidden;
+            padding: clamp(2rem, 6vw, 5rem);
+            border: 1px solid var(--line-strong);
+            border-radius: calc(var(--radius) * 1.6);
+            background:
+                radial-gradient(80% 120% at 0% 0%, rgba(25, 179, 125, 0.28), transparent 60%),
+                radial-gradient(70% 110% at 100% 100%, rgba(230, 176, 74, 0.26), transparent 60%),
+                radial-gradient(50% 80% at 100% 0%, rgba(239, 106, 69, 0.14), transparent 70%),
+                rgba(6, 16, 13, 0.5);
+        }
+
+        .cta-panel h2 {
+            font-size: clamp(3rem, 9.5vw, 8.5rem);
+            line-height: 0.92;
+            max-width: 12ch;
+        }
+
+        .cta-panel .sub {
+            margin-top: 1.5rem;
+            max-width: 30rem;
+            color: var(--muted);
+            font-size: 1.125rem;
+        }
+
+        .cta-panel .cta {
+            margin-top: 2.25rem;
+            grid-row: auto;
+        }
+
+        .socials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 1.25rem 1.4rem;
+        }
+
+        .social .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .social .n {
+            font-size: 1.0625rem;
+            font-weight: 500;
+            line-height: 1.2;
+            overflow-wrap: anywhere;
+        }
+
+        .social .arr {
+            transition: transform 0.3s var(--ease), color 0.2s;
+        }
+
+        .social:hover .arr {
+            transform: translate(3px, -3px);
+            color: var(--gold);
+        }
+
+        .social a::after {
+            content: "";
+            position: absolute;
+            inset: 0;
         }
 
         /* ---------- footer ---------- */
 
         footer {
-            display: flex;
-            justify-content: space-between;
-            gap: 1rem;
-            margin-top: clamp(4rem, 10vh, 6rem);
-            padding: 1.25rem 0 clamp(1.5rem, 4vw, 2.5rem);
-            border-top: 1px solid var(--rule);
-            font-family: var(--mono);
-            font-size: 0.75rem;
+            margin-top: clamp(4.5rem, 10vw, 8rem);
+            border-top: 1px solid var(--line);
+            padding: 1.75rem 0 2.5rem;
             color: var(--muted);
         }
 
+        footer .wrap {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 1rem 2rem;
+        }
+
         footer a {
-            border-bottom: 1px solid var(--rule);
-            transition: color 0.2s ease, border-color 0.2s ease;
+            border-bottom: 1px solid var(--line-strong);
+            transition: color 0.2s, border-color 0.2s;
         }
 
         footer a:hover {
             color: var(--fg);
-            border-color: var(--accent);
+            border-color: var(--fg);
         }
 
-        /* ---------- motion ---------- */
+        /* ---------- reveal ---------- */
 
-        @keyframes rise {
-            from {
-                opacity: 0;
-                transform: translateY(0.6rem);
+        .js [data-reveal] {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+            transition-delay: var(--d, 0s);
+        }
+
+        .js [data-reveal].in {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* ---------- responsive ---------- */
+
+        @media (max-width: 64rem) {
+            .tools {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .about-copy,
+            .side {
+                grid-column: 1 / -1;
+            }
+
+            .side {
+                display: grid;
+                grid-template-columns: 15rem 1fr;
+                gap: 2rem;
+                align-items: center;
+            }
+
+            .portrait {
+                margin-bottom: 0;
+            }
+
+            .intro,
+            .cta {
+                grid-column: 1 / -1;
+            }
+
+            .stats {
+                grid-column: 1 / -1;
+                grid-row: auto;
+            }
+
+            .cta {
+                grid-row: auto;
+            }
+
+            .panels {
+                grid-template-columns: 1fr;
             }
         }
 
-        @keyframes blink {
-            50% {
-                opacity: 0;
+        @media (max-width: 40rem) {
+            body {
+                font-size: 1rem;
+            }
+
+            .nav a:not(.pill) {
+                display: none;
+            }
+
+            .tools,
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card.feat {
+                grid-column: auto;
+            }
+
+            .side {
+                grid-template-columns: 1fr;
+                justify-items: start;
+            }
+
+            .portrait {
+                width: 11rem;
+            }
+
+            .facts {
+                width: 100%;
+            }
+
+            .facts div {
+                grid-template-columns: 6rem 1fr;
+            }
+
+            .tool {
+                min-height: 12rem;
+            }
+
+            .stat {
+                padding: 0.9rem 1rem;
             }
         }
 
-        .masthead {
-            animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-        }
-
-        h1 span {
-            animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-        }
-
-        h1 span:nth-child(1) {
-            animation-delay: 0.1s;
-        }
-
-        h1 span:nth-child(2) {
-            animation-delay: 0.22s;
-        }
-
-        .whoami li {
-            animation: rise 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-            animation-delay: calc(0.55s + var(--i) * 0.28s);
-        }
-
-        .links li {
-            animation: rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-            animation-delay: calc(1.5s + var(--i) * 0.07s);
-        }
-
-        .caret {
-            animation: blink 1.1s steps(1) infinite;
-            animation-delay: 1.8s;
-        }
+        /* ---------- motion preferences ---------- */
 
         @media (prefers-reduced-motion: reduce) {
             *,
@@ -328,116 +1428,667 @@
                 animation: none !important;
                 transition: none !important;
             }
-        }
 
-        /* ---------- small screens ---------- */
-
-        @media (max-width: 40rem) {
-            body {
-                font-size: 1.0625rem;
+            .js [data-reveal] {
+                opacity: 1;
+                transform: none;
             }
 
-            .row {
-                grid-template-columns: 1fr;
-                row-gap: 1rem;
-            }
-
-            .label {
-                padding-top: 0;
-            }
-
-            .links .name {
-                font-size: 1.3125rem;
-            }
-
-            .whoami {
-                font-size: 0.875rem;
-            }
-        }
-
-        @media (max-width: 22rem) {
-            .links a {
-                grid-template-columns: 1fr 1.5rem;
-            }
-
-            .links .handle {
+            .rot span:not(:first-child) {
                 display: none;
+            }
+
+            .rot span:first-child {
+                opacity: 1;
+                transform: none;
+                filter: none;
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="page">
-        <header class="masthead">
-            <span>@IamJithendra</span>
-            <span>Kerala, India</span>
-        </header>
+    <a class="skip mono" href="#main">Skip to content</a>
+    <div class="progress" aria-hidden="true"></div>
 
-        <main>
-            <h1>
-                <span>Jithendra</span>
-                <span class="last">V&nbsp;Kumar</span>
-            </h1>
-
-            <section class="row" aria-labelledby="about-label">
-                <h2 class="label" id="about-label">whoami</h2>
-                <ul class="whoami">
-                    <li style="--i:0"><span>Hi, I'm <b>Jithendra V Kumar</b></span></li>
-                    <li style="--i:1"><span>from <b>God's Own Country</b>, Kerala</span></li>
-                    <li style="--i:2"><span>a tech enthusiast &amp; script kiddie</span></li>
-                    <li style="--i:3"><span>noob in Python, Android, PHP &amp; NodeJS</span></li>
-                    <li style="--i:4"><span>after all, a pirated mallu<i class="caret" aria-hidden="true"></i></span></li>
-                </ul>
-            </section>
-
-            <section class="row" aria-labelledby="links-label">
-                <h2 class="label" id="links-label">elsewhere</h2>
-                <ul class="links">
-                    <li style="--i:0">
-                        <a href="https://github.com/IamJithendra">
-                            <span class="name">GitHub</span>
-                            <span class="handle">@IamJithendra</span>
-                            <span class="arrow" aria-hidden="true">&#8599;</span>
-                        </a>
-                    </li>
-                    <li style="--i:1">
-                        <a href="https://t.me/IamJithendra">
-                            <span class="name">Telegram</span>
-                            <span class="handle">@IamJithendra</span>
-                            <span class="arrow" aria-hidden="true">&#8599;</span>
-                        </a>
-                    </li>
-                    <li style="--i:2">
-                        <a href="https://instagram.com/IamJithendra">
-                            <span class="name">Instagram</span>
-                            <span class="handle">@IamJithendra</span>
-                            <span class="arrow" aria-hidden="true">&#8599;</span>
-                        </a>
-                    </li>
-                    <li style="--i:3">
-                        <a href="https://facebook.com/IamJithendra.V.Kumar/">
-                            <span class="name">Facebook</span>
-                            <span class="handle">IamJithendra.V.Kumar</span>
-                            <span class="arrow" aria-hidden="true">&#8599;</span>
-                        </a>
-                    </li>
-                    <li style="--i:4">
-                        <a href="https://t.me/MalluBots">
-                            <span class="name">MalluBots</span>
-                            <span class="handle">t.me/MalluBots</span>
-                            <span class="arrow" aria-hidden="true">&#8599;</span>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-        </main>
-
-        <footer>
-            <span>&copy; 2020&ndash;2026 <a href="https://t.me/MalluBots">MalluBots</a></span>
-            <span>Made in Kerala</span>
-        </footer>
+    <div class="aurora" aria-hidden="true">
+        <div class="blob b1"><i></i></div>
+        <div class="blob b2"><i></i></div>
+        <div class="blob b3"><i></i></div>
+        <div class="blob b4"><i></i></div>
+        <div class="grain"></div>
     </div>
+
+    <header class="bar" id="bar">
+        <div class="wrap">
+            <a class="logo" href="#top" aria-label="Jithendra V Kumar, back to top"><b>J</b><span>Jithendra</span></a>
+            <nav class="nav" aria-label="Sections">
+                <a href="#about">About</a>
+                <a href="#toolkit">Toolkit</a>
+                <a href="#work">Work</a>
+                <a class="pill" href="#contact">Say hi</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- HERO -->
+        <div class="hero" id="top">
+            <div class="wrap hero-in">
+                <div class="chip mono muted"><span class="live"></span><span>Kerala, India &middot; <b id="clock">--:--</b> IST</span></div>
+
+                <h1 class="name" id="name" aria-label="Jithendra V Kumar">
+                    <span class="line first" data-text="Jithendra">Jithendra</span>
+                    <span class="line second" data-text="V Kumar">V Kumar</span>
+                </h1>
+
+                <p class="role">
+                    <span class="sr">I'm a tech enthusiast, a script kiddie, a noob in Python, Android, PHP and NodeJS, and a pirated mallu.</span>
+                    <span class="lead" aria-hidden="true">I'm a</span>
+                    <span class="rot" id="rot" aria-hidden="true">
+                        <span class="on">tech enthusiast.</span>
+                        <span>script kiddie.</span>
+                        <span>noob in Python &amp; co.</span>
+                        <span>pirated mallu.</span>
+                    </span>
+                </p>
+
+                <div class="hero-foot">
+                    <p class="intro">From <strong>God's Own Country</strong>. I tinker with Python, Android, PHP and NodeJS, and everything I put on GitHub shows up below, live.</p>
+                    <div class="cta">
+                        <a class="btn solid" href="#work">See my work <span class="arr" aria-hidden="true">&darr;</span></a>
+                        <a class="btn" href="https://t.me/IamJithendra">Say hi on Telegram <span class="arr" aria-hidden="true">&#8599;</span></a>
+                    </div>
+                    <dl class="stats" id="stats">
+                        <div class="stat"><dd data-count="repos">&ndash;</dd><dt class="mono muted">Public repos</dt></div>
+                        <div class="stat"><dd data-count="stars">&ndash;</dd><dt class="mono muted">Stars earned</dt></div>
+                        <div class="stat"><dd data-count="followers">&ndash;</dd><dt class="mono muted">Followers</dt></div>
+                        <div class="stat"><dd id="since">&ndash;</dd><dt class="mono muted">On GitHub since</dt></div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+
+        <div class="marquee" aria-hidden="true">
+            <div class="track">
+                <span>Python</span><span>Android</span><span>PHP</span><span>NodeJS</span><span>Telegram bots</span><span>Kerala</span>
+                <span>Python</span><span>Android</span><span>PHP</span><span>NodeJS</span><span>Telegram bots</span><span>Kerala</span>
+            </div>
+        </div>
+
+        <!-- ABOUT -->
+        <section id="about" aria-labelledby="t-about">
+            <div class="wrap about">
+                <div class="about-copy">
+                    <div class="eyebrow mono" data-reveal><b>01</b> About</div>
+                    <h2 id="t-about" data-reveal>Self-taught, <em>self-roasted</em>, still shipping.</h2>
+                    <p class="lede" data-reveal>I'm Jithendra V Kumar, a tech enthusiast and a proud script kiddie from Kerala. Noob in Python, Android, PHP and NodeJS. <em>After all, a pirated mallu.</em></p>
+                    <div class="body" data-reveal>
+                        <p>I like poking at how things work and building small things out of the pieces. I'm upfront that I'm still learning every one of these tools, and that's the fun of it.</p>
+                        <p>Most of what I make ends up on GitHub, and the work section below reads straight from there, so it's always current.</p>
+                    </div>
+                </div>
+                <div class="side" data-reveal>
+                    <div class="portrait" aria-hidden="true">
+                        <div class="in"><span>J</span><img id="avatar" alt="" width="240" height="240"></div>
+                    </div>
+                    <dl class="facts mono">
+                        <div><dt>Name</dt><dd>Jithendra V Kumar</dd></div>
+                        <div><dt>Based in</dt><dd>Kerala, India</dd></div>
+                        <div><dt>Handle</dt><dd>@IamJithendra</dd></div>
+                        <div><dt>Tinkering</dt><dd>Python, Android, PHP, NodeJS</dd></div>
+                        <div><dt>Community</dt><dd><a href="https://t.me/MalluBots">MalluBots</a></dd></div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOOLKIT -->
+        <section id="toolkit" aria-labelledby="t-tool">
+            <div class="wrap">
+                <div class="sec-head">
+                    <div>
+                        <div class="eyebrow mono" data-reveal><b>02</b> Toolkit</div>
+                        <h2 id="t-tool" data-reveal>What I <em>tinker</em> with</h2>
+                    </div>
+                    <p data-reveal>Four tools I keep coming back to. Repo counts are live from GitHub.</p>
+                </div>
+                <ul class="tools" id="tools">
+                    <li class="tool spot" data-reveal data-lang="Python"><div class="top"><span class="mono muted">01</span><span class="tag mono">Learning</span></div><h3>Python</h3><p>Scripts, automation and quick experiments.</p></li>
+                    <li class="tool spot" data-reveal style="--d:.08s" data-lang="Java,Kotlin"><div class="top"><span class="mono muted">02</span><span class="tag mono">Learning</span></div><h3>Android</h3><p>Apps for the phone that's always in my pocket.</p></li>
+                    <li class="tool spot" data-reveal style="--d:.16s" data-lang="PHP"><div class="top"><span class="mono muted">03</span><span class="tag mono">Learning</span></div><h3>PHP</h3><p>Server-side tinkering and web back ends.</p></li>
+                    <li class="tool spot" data-reveal style="--d:.24s" data-lang="JavaScript,TypeScript"><div class="top"><span class="mono muted">04</span><span class="tag mono">Learning</span></div><h3>NodeJS</h3><p>JavaScript beyond the browser.</p></li>
+                </ul>
+
+                <div class="panels" id="panels" hidden>
+                    <div class="panel spot" data-reveal>
+                        <h3>Languages <span class="mono muted" id="lang-meta"></span></h3>
+                        <div class="stack-bar" id="stack-bar"></div>
+                        <ul class="legend" id="legend"></ul>
+                    </div>
+                    <div class="panel spot" data-reveal style="--d:.1s">
+                        <h3>Repos by year <span class="mono muted">created</span></h3>
+                        <ul class="years mono" id="years"></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK -->
+        <section id="work" aria-labelledby="t-work">
+            <div class="wrap">
+                <div class="sec-head">
+                    <div>
+                        <div class="eyebrow mono" data-reveal><b>03</b> Work</div>
+                        <h2 id="t-work" data-reveal>Selected <em>projects</em></h2>
+                    </div>
+                    <p data-reveal id="work-note">Pulled live from my public GitHub repositories. Forks are left out.</p>
+                </div>
+                <div class="filters" id="filters" hidden aria-label="Filter by language"></div>
+                <div id="work-body" aria-live="polite" aria-busy="true">
+                    <noscript><p class="status">Projects are listed live from GitHub. Enable JavaScript or <a href="https://github.com/IamJithendra?tab=repositories">browse the repositories on GitHub</a>.</p></noscript>
+                </div>
+                <div class="more" id="more" hidden><button class="btn" id="more-btn" type="button"></button></div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" aria-labelledby="t-contact">
+            <div class="wrap">
+                <div class="cta-panel" data-reveal>
+                    <div class="eyebrow mono"><b>04</b> Contact</div>
+                    <h2 id="t-contact">Let's <em>talk</em>.</h2>
+                    <p class="sub">Got a question, a bug or just want to say hi? Pick a place and find me there.</p>
+                    <div class="cta">
+                        <a class="btn solid" href="https://t.me/IamJithendra">Message on Telegram <span class="arr" aria-hidden="true">&#8599;</span></a>
+                        <a class="btn" href="https://github.com/IamJithendra">Follow on GitHub <span class="arr" aria-hidden="true">&#8599;</span></a>
+                    </div>
+                </div>
+                <ul class="socials">
+                    <li class="social spot" data-reveal><div class="row"><span class="mono muted">GitHub</span><span class="arr" aria-hidden="true">&#8599;</span></div><a class="n" href="https://github.com/IamJithendra">@IamJithendra</a></li>
+                    <li class="social spot" data-reveal style="--d:.06s"><div class="row"><span class="mono muted">Telegram</span><span class="arr" aria-hidden="true">&#8599;</span></div><a class="n" href="https://t.me/IamJithendra">@IamJithendra</a></li>
+                    <li class="social spot" data-reveal style="--d:.12s"><div class="row"><span class="mono muted">Instagram</span><span class="arr" aria-hidden="true">&#8599;</span></div><a class="n" href="https://instagram.com/IamJithendra">@IamJithendra</a></li>
+                    <li class="social spot" data-reveal style="--d:.18s"><div class="row"><span class="mono muted">Facebook</span><span class="arr" aria-hidden="true">&#8599;</span></div><a class="n" href="https://facebook.com/IamJithendra.V.Kumar/">IamJithendra.V.Kumar</a></li>
+                    <li class="social spot" data-reveal style="--d:.24s"><div class="row"><span class="mono muted">Community</span><span class="arr" aria-hidden="true">&#8599;</span></div><a class="n" href="https://t.me/MalluBots">MalluBots</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mono">
+        <div class="wrap">
+            <span>&copy; 2020&ndash;2026 <a href="https://t.me/MalluBots">MalluBots</a> &middot; Jithendra V Kumar</span>
+            <span>Set in Fraunces &amp; Geist. No frameworks, no trackers.</span>
+            <a href="#top">Back to top &uarr;</a>
+        </div>
+    </footer>
+
+    <script>
+    (function () {
+        'use strict';
+
+        var USER = 'IamJithendra';
+        var API = 'https://api.github.com';
+        var PAGE = 6;
+        var CACHE_KEY = 'jvk:gh:v2';
+        var TTL = 30 * 60 * 1000;
+        var PALETTE = ['#19b37d', '#e6b04a', '#ef6a45', '#3fb8c4', '#c9d98a', '#e0a0c0'];
+
+        var doc = document.documentElement;
+        var $ = function (id) { return document.getElementById(id); };
+        var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var finePointer = window.matchMedia && matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+        function el(tag, cls, text) {
+            var n = document.createElement(tag);
+            if (cls) n.className = cls;
+            if (text != null) n.textContent = text;
+            return n;
+        }
+
+        /* ---------- clock ---------- */
+        (function () {
+            var out = $('clock');
+            try {
+                var f = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', hour12: false, timeZone: 'Asia/Kolkata' });
+                var tick = function () { out.textContent = f.format(new Date()); };
+                tick();
+                setInterval(tick, 20000);
+            } catch (e) { /* keep placeholder */ }
+        })();
+
+        /* ---------- scroll: progress, bar state, aurora parallax ---------- */
+        var bar = $('bar');
+        var ticking = false;
+        function onScroll() {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(function () {
+                var y = window.pageYOffset || doc.scrollTop;
+                var max = Math.max(1, doc.scrollHeight - window.innerHeight);
+                doc.style.setProperty('--sy', y.toFixed(0));
+                doc.style.setProperty('--p', Math.min(1, y / max).toFixed(4));
+                bar.classList.toggle('scrolled', y > 12);
+                ticking = false;
+            });
+        }
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', onScroll);
+        onScroll();
+
+        /* ---------- hero name: split into letters ---------- */
+        var chars = [];
+        (function () {
+            var n = 0;
+            document.querySelectorAll('#name .line').forEach(function (line) {
+                var text = line.getAttribute('data-text');
+                var words = text.split(' ');
+                var total = text.replace(/ /g, '').length;
+                var k = 0;
+                line.textContent = '';
+                line.setAttribute('aria-hidden', 'true');
+                words.forEach(function (w, wi) {
+                    var ws = el('span', 'word');
+                    w.split('').forEach(function (c) {
+                        var s = el('span', 'ch', c);
+                        s.style.setProperty('--i', n++);
+                        s.style.setProperty('--t', (total > 1 ? k / (total - 1) : 0).toFixed(3));
+                        k++;
+                        ws.appendChild(s);
+                        chars.push(s);
+                    });
+                    line.appendChild(ws);
+                    if (wi < words.length - 1) line.appendChild(document.createTextNode(' '));
+                });
+            });
+        })();
+
+        function setAxes(c, wght, soft) {
+            c.style.fontVariationSettings = '"opsz" 144, "wght" ' + Math.round(wght) + ', "SOFT" ' + Math.round(soft);
+        }
+
+        var hero = document.querySelector('.hero');
+        var raf = 0, px = 0, py = 0;
+
+        function reactive() {
+            raf = 0;
+            var rects = chars.map(function (c) { return c.getBoundingClientRect(); });
+            rects.forEach(function (r, i) {
+                var d = Math.hypot(px - (r.left + r.width / 2), py - (r.top + r.height / 2));
+                var f = Math.max(0, 1 - d / (r.height * 1.7));
+                f = f * f;
+                setAxes(chars[i], 400 + 400 * f, 100 * f);
+            });
+        }
+
+        hero.addEventListener('pointermove', function (e) {
+            var hr = hero.getBoundingClientRect();
+            hero.style.setProperty('--px', (e.clientX - hr.left) + 'px');
+            hero.style.setProperty('--py', (e.clientY - hr.top) + 'px');
+            if (reduce || !finePointer) return;
+            px = e.clientX; py = e.clientY;
+            if (!raf) raf = requestAnimationFrame(reactive);
+        });
+
+        hero.addEventListener('pointerleave', function () {
+            if (raf) { cancelAnimationFrame(raf); raf = 0; }
+            chars.forEach(function (c) { c.style.fontVariationSettings = ''; });
+        });
+
+        function wave() {
+            if (reduce || !chars.length || !chars[0].animate) return;
+            chars.forEach(function (c, i) {
+                c.animate([
+                    { fontVariationSettings: '"opsz" 144, "wght" 400, "SOFT" 0', transform: 'translateY(0)' },
+                    { fontVariationSettings: '"opsz" 144, "wght" 800, "SOFT" 100', transform: 'translateY(-0.04em)', offset: 0.45 },
+                    { fontVariationSettings: '"opsz" 144, "wght" 400, "SOFT" 0', transform: 'translateY(0)' }
+                ], { duration: 1500, delay: i * 70, easing: 'cubic-bezier(0.4, 0, 0.2, 1)' });
+            });
+        }
+        if (!reduce) {
+            setTimeout(wave, 1900);
+            setInterval(function () {
+                if (document.hidden || raf) return;
+                var r = hero.getBoundingClientRect();
+                if (r.bottom > 0) wave();
+            }, 11000);
+        }
+
+        /* ---------- role rotator ---------- */
+        (function () {
+            var words = $('rot').children;
+            if (reduce || words.length < 2) return;
+            var i = 0;
+            setInterval(function () {
+                if (document.hidden) return;
+                var cur = words[i];
+                i = (i + 1) % words.length;
+                var nxt = words[i];
+                cur.classList.remove('on');
+                cur.classList.add('off');
+                nxt.classList.remove('off');
+                nxt.classList.add('on');
+                setTimeout(function () {
+                    cur.classList.remove('off');
+                }, 650);
+            }, 2600);
+        })();
+
+        /* ---------- reveal on scroll ---------- */
+        var io = null;
+        function observe(nodes) {
+            if (!nodes) return;
+            nodes.forEach(function (n) {
+                if (io) io.observe(n); else n.classList.add('in');
+            });
+        }
+        if ('IntersectionObserver' in window && !reduce) {
+            io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (en) {
+                    if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+                });
+            }, { rootMargin: '0px 0px -6% 0px', threshold: 0.05 });
+        }
+        observe(document.querySelectorAll('[data-reveal]'));
+
+        /* ---------- spotlight on cards ---------- */
+        document.addEventListener('pointermove', function (e) {
+            var t = e.target.closest ? e.target.closest('.spot') : null;
+            if (!t) return;
+            var r = t.getBoundingClientRect();
+            t.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+            t.style.setProperty('--my', (e.clientY - r.top) + 'px');
+        }, { passive: true });
+
+        /* ---------- count-up ---------- */
+        function countUp(node, to) {
+            if (reduce || to < 2) { node.textContent = String(to); return; }
+            var start = null, dur = 1300;
+            function step(ts) {
+                if (start === null) start = ts;
+                var p = Math.min(1, (ts - start) / dur);
+                var e = 1 - Math.pow(1 - p, 3);
+                node.textContent = String(Math.round(to * e));
+                if (p < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+
+        /* ---------- GitHub data ---------- */
+        function slimRepo(r) {
+            return {
+                name: r.name,
+                desc: r.description || '',
+                url: r.html_url,
+                home: r.homepage || '',
+                lang: r.language || '',
+                stars: r.stargazers_count || 0,
+                pushed: r.pushed_at || r.updated_at || '',
+                created: r.created_at || '',
+                fork: !!r.fork
+            };
+        }
+
+        function slimUser(u) {
+            return u ? { avatar: u.avatar_url || '', followers: u.followers || 0, created: u.created_at || '' } : null;
+        }
+
+        function readCache() {
+            try {
+                var c = JSON.parse(localStorage.getItem(CACHE_KEY));
+                return c && Array.isArray(c.repos) ? c : null;
+            } catch (e) { return null; }
+        }
+
+        function writeCache(user, repos) {
+            try { localStorage.setItem(CACHE_KEY, JSON.stringify({ t: Date.now(), user: user, repos: repos })); } catch (e) { /* ignore */ }
+        }
+
+        function getJSON(url) {
+            return fetch(url, { headers: { Accept: 'application/vnd.github+json' } }).then(function (r) {
+                if (!r.ok) throw new Error('HTTP ' + r.status);
+                return r.json();
+            });
+        }
+
+        function load() {
+            var c = readCache();
+            if (c && Date.now() - c.t < TTL) return Promise.resolve(c);
+            return Promise.all([
+                getJSON(API + '/users/' + USER).then(slimUser).catch(function () { return c ? c.user : null; }),
+                getJSON(API + '/users/' + USER + '/repos?per_page=100&sort=pushed').then(function (j) { return j.map(slimRepo); })
+            ]).then(function (res) {
+                writeCache(res[0], res[1]);
+                return { user: res[0], repos: res[1] };
+            }).catch(function (e) {
+                if (c) return c;
+                throw e;
+            });
+        }
+
+        /* ---------- render helpers ---------- */
+        var body = $('work-body');
+        var all = [];
+        var colorOf = {};
+        var lang = '';
+        var showAll = false;
+
+        function fmtDate(s) {
+            if (!s) return '';
+            try { return new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric' }).format(new Date(s)); }
+            catch (e) { return s.slice(0, 7); }
+        }
+
+        function counts(list) {
+            var m = {};
+            list.forEach(function (r) { if (r.lang) m[r.lang] = (m[r.lang] || 0) + 1; });
+            return Object.keys(m).map(function (k) { return [k, m[k]]; })
+                .sort(function (a, b) { return b[1] - a[1] || (a[0] < b[0] ? -1 : 1); });
+        }
+
+        function skeleton() {
+            body.textContent = '';
+            var g = el('div', 'grid');
+            for (var i = 0; i < 3; i++) g.appendChild(el('div', 'sk'));
+            body.appendChild(g);
+        }
+
+        function fail() {
+            body.setAttribute('aria-busy', 'false');
+            body.textContent = '';
+            var p = el('p', 'status');
+            p.appendChild(document.createTextNode("Couldn't reach GitHub just now. "));
+            var a = el('a', null, 'Browse the repositories directly');
+            a.href = 'https://github.com/' + USER + '?tab=repositories';
+            p.appendChild(a);
+            p.appendChild(document.createTextNode('.'));
+            body.appendChild(p);
+            ['repos', 'stars', 'followers'].forEach(function (k) {
+                var n = document.querySelector('[data-count="' + k + '"]');
+                if (n) n.textContent = '–';
+            });
+        }
+
+        function card(r, i, feat) {
+            var li = el('div', 'card spot' + (feat ? ' feat' : ''));
+            li.style.setProperty('--i', i);
+            if (r.lang && colorOf[r.lang]) li.style.setProperty('--c', colorOf[r.lang]);
+
+            var meta = el('div', 'meta mono');
+            meta.appendChild(el('span', 'l', r.lang || 'Various'));
+            meta.appendChild(el('span', null, r.stars ? r.stars + (r.stars === 1 ? ' star' : ' stars') : ''));
+            li.appendChild(meta);
+
+            var h = el('h3');
+            var a = el('a', null, r.name);
+            a.href = r.url;
+            h.appendChild(a);
+            li.appendChild(h);
+
+            li.appendChild(el('p', 'desc', r.desc || 'No description yet.'));
+
+            var foot = el('div', 'foot mono');
+            foot.appendChild(el('span', null, r.pushed ? 'Updated ' + fmtDate(r.pushed) : ''));
+            var right = el('span');
+            if (/^https?:\/\//i.test(r.home)) {
+                var live = el('a', null, 'Live');
+                live.href = r.home;
+                right.appendChild(live);
+                right.appendChild(document.createTextNode('  '));
+            }
+            right.appendChild(el('span', 'open', 'Open ↗'));
+            foot.appendChild(right);
+            li.appendChild(foot);
+            return li;
+        }
+
+        function renderWork() {
+            var list = all.filter(function (r) { return !lang || r.lang === lang; });
+            var shown = showAll ? list : list.slice(0, PAGE);
+            body.setAttribute('aria-busy', 'false');
+            body.textContent = '';
+
+            if (!list.length) {
+                body.appendChild(el('p', 'status', 'Nothing public here yet.'));
+            } else {
+                var g = el('div', 'grid');
+                shown.forEach(function (r, i) { g.appendChild(card(r, i, i === 0 && !lang && shown.length > 1)); });
+                body.appendChild(g);
+            }
+
+            var more = $('more');
+            if (list.length > PAGE) {
+                more.hidden = false;
+                $('more-btn').textContent = showAll ? 'Show fewer' : 'Show all ' + list.length + ' projects';
+            } else {
+                more.hidden = true;
+            }
+        }
+
+        function renderFilters() {
+            var c = counts(all);
+            var box = $('filters');
+            box.textContent = '';
+            if (c.length < 2) { box.hidden = true; return; }
+            box.hidden = false;
+
+            function chip(label, value, n) {
+                var b = el('button', 'chipbtn', label);
+                b.type = 'button';
+                b.setAttribute('aria-pressed', String(lang === value));
+                b.appendChild(el('sup', null, String(n)));
+                b.addEventListener('click', function () {
+                    lang = (lang === value) ? '' : value;
+                    showAll = false;
+                    renderFilters();
+                    renderWork();
+                });
+                return b;
+            }
+            box.appendChild(chip('All', '', all.length));
+            c.forEach(function (x) { box.appendChild(chip(x[0], x[0], x[1])); });
+        }
+
+        function renderToolkit() {
+            var c = counts(all);
+            var byLang = {};
+            c.forEach(function (x) { byLang[x[0]] = x[1]; });
+
+            document.querySelectorAll('#tools .tool').forEach(function (t) {
+                var n = 0;
+                t.getAttribute('data-lang').split(',').forEach(function (l) { n += byLang[l] || 0; });
+                var tag = t.querySelector('.tag');
+                if (n > 0) {
+                    tag.textContent = n + (n === 1 ? ' repo' : ' repos');
+                    tag.classList.add('gold');
+                }
+            });
+
+            if (!c.length) return;
+            var panels = $('panels');
+            panels.hidden = false;
+            observe(panels.querySelectorAll('[data-reveal]'));
+
+            var total = c.reduce(function (s, x) { return s + x[1]; }, 0);
+            var bar = $('stack-bar'), legend = $('legend');
+            bar.textContent = ''; legend.textContent = '';
+            c.forEach(function (x, i) {
+                var col = i < PALETTE.length ? PALETTE[i] : '#7d8a83';
+                colorOf[x[0]] = col;
+                var seg = el('i');
+                seg.style.setProperty('--n', x[1]);
+                seg.style.setProperty('--c', col);
+                seg.style.setProperty('--i', i);
+                seg.title = x[0] + ': ' + x[1];
+                bar.appendChild(seg);
+                var li = el('li', null, x[0]);
+                li.style.setProperty('--c', col);
+                li.appendChild(el('b', null, String(x[1])));
+                legend.appendChild(li);
+            });
+            $('lang-meta').textContent = total + ' repos with a main language';
+
+            var years = {};
+            all.forEach(function (r) {
+                if (!r.created) return;
+                var y = new Date(r.created).getUTCFullYear();
+                if (y) years[y] = (years[y] || 0) + 1;
+            });
+            var ys = Object.keys(years).sort();
+            var yc = $('years');
+            yc.textContent = '';
+            var maxY = Math.max.apply(null, ys.map(function (y) { return years[y]; }));
+            ys.forEach(function (y, i) {
+                var li = el('li');
+                li.appendChild(el('span', 'muted', String(years[y])));
+                var col = el('div', 'col');
+                col.style.setProperty('--h', Math.max(8, years[y] / maxY * 78) + '%');
+                col.style.setProperty('--i', i);
+                li.appendChild(col);
+                li.appendChild(el('span', 'muted', y));
+                yc.appendChild(li);
+            });
+            if (ys.length < 2) yc.closest('.panel').hidden = true;
+        }
+
+        function renderStats(user) {
+            var stars = all.reduce(function (s, r) { return s + r.stars; }, 0);
+            countUp(document.querySelector('[data-count="repos"]'), all.length);
+            countUp(document.querySelector('[data-count="stars"]'), stars);
+            var f = document.querySelector('[data-count="followers"]');
+            if (user) countUp(f, user.followers);
+            if (user && user.created) {
+                $('since').textContent = String(new Date(user.created).getUTCFullYear());
+            }
+        }
+
+        function renderAvatar(user) {
+            if (!user || !/^https:\/\/avatars\.githubusercontent\.com\//.test(user.avatar)) return;
+            var img = $('avatar');
+            img.onload = function () { img.classList.add('ok'); };
+            img.src = user.avatar + (user.avatar.indexOf('?') > -1 ? '&' : '?') + 's=480';
+        }
+
+        $('more-btn').addEventListener('click', function () {
+            showAll = !showAll;
+            renderWork();
+        });
+
+        skeleton();
+        load().then(function (data) {
+            all = data.repos.filter(function (r) {
+                return !r.fork && r.name.toLowerCase() !== USER.toLowerCase();
+            }).sort(function (a, b) {
+                return (b.stars - a.stars) || (a.pushed < b.pushed ? 1 : -1);
+            });
+            renderToolkit();     /* assigns language colours first */
+            renderFilters();
+            renderWork();
+            renderStats(data.user);
+            renderAvatar(data.user);
+        }).catch(fail);
+    })();
+    </script>
 </body>
 
 </html>
